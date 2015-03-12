@@ -26,9 +26,6 @@
     <% } else if (post.excerpt){ %><%-: post.excerpt | cdata %>
     <% } else {%><%-: post.content.substring(0, 140) | cdata %><% } %>
     </summary>
-    <% [].concat(post.tags.toArray(), post.categories.toArray()).forEach(function(category){ %>
-      <category term="<%= category.name %>" scheme="<%- encodeURI(category.permalink) %>"/>
-    <% }) %>
   </entry>
   <% }) %>
 </feed>

@@ -43,7 +43,7 @@ module.exports = function(locals, render, callback){
     var template = atomTmpl;
   }
 
-  var posts = locals.posts.sort('date', -1);
+  var posts = locals.pages.sort('date', -1);
   if (feedConfig.limit) posts = posts.limit(feedConfig.limit);
 
   var xml = template({
